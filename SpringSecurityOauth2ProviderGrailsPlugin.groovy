@@ -73,7 +73,7 @@ import static grails.plugin.springsecurity.oauthprovider.approval.UserApprovalSu
 class SpringSecurityOauth2ProviderGrailsPlugin {
 	static final Logger log = LoggerFactory.getLogger(this)
 
-	def version = "2.0-RC4-PG.1"
+	def version = "2.0-RC4-PG.2"
 	def grailsVersion = '2.3 > *'
 
 	List pluginExcludes = [
@@ -191,12 +191,12 @@ class SpringSecurityOauth2ProviderGrailsPlugin {
 	}
 
     private configureGormSupport = {
-        /* Gorm backed beans */
+        /* Gorm backed beans
         springConfig.addAlias 'clientDetailsService', 'gormClientDetailsService'
         springConfig.addAlias 'tokenStore', 'gormTokenStoreService'
         springConfig.addAlias 'authorizationCodeServices', 'gormAuthorizationCodeService'
         springConfig.addAlias 'approvalStore', 'gormApprovalStoreService'
-
+        */
         /* Helper classes for Gorm support */
         oauth2AuthenticationSerializer(DefaultOAuth2AuthenticationSerializer)
         authenticationKeyGenerator(DefaultAuthenticationKeyGenerator)
